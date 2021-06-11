@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
 import {Route, NavLink, HashRouter, useHistory} from "react-router-dom"
 
-import Home from "./Testing/Home";
-import Tags from "./Testing/Tags";
-import Folders from "./Testing/Folders";
-import Settings from "./Testing/Settings";
+import Home from "./Home";
+import Tags from "./Tags";
+import Folders from "./Folders";
+import Settings from "./Settings";
 import { Component } from 'react';
+import "./Dashboard2.css"
 
 
 class Dashboard2 extends Component{

@@ -4,7 +4,7 @@ import Signup from "./Signup"
 import Dashboard from "./Dashboard"
 import Dashboard2 from "./Dashboard2"
 import LandingPage from "./LandingPage"
-import Main from "../components/Testing/Main"
+import Main from "./Main"
 import Login from "./Login"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from './UpdateProfile'
@@ -25,9 +25,9 @@ function App() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" component={LandingPage}/>
+              <Route exact path="/" component={LandingPage}/>
+              <PrivateRoute exact path="/dashboard" component={Dashboard2}/>
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
-              <PrivateRoute path="/dashboard" component={Dashboard2} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path='/forgot-password' component={ForgotPassword} />

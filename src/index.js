@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import Main from "./components/Testing/Main";
-import "./components/Testing/index.css";
+import Main from "./components/Main";
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -10,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Main />
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
