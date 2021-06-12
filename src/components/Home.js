@@ -4,6 +4,10 @@ class Home extends Component {
     render() {
         return (
         <div>
+            <div className="input">
+                <input type="text" className="inputLink" value={this.props.value} name={this.props.name} onChange={this.props.handleChange}/>
+                <input type="submit"/>
+            </div>
             <h2>HELLO</h2>
             <p>Cras facilisis urna ornare ex volutpat, et
             convallis erat elementum. Ut aliquam, ipsum vitae

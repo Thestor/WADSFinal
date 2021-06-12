@@ -7,7 +7,7 @@ import Folders from "./Folders";
 import Settings from "./Settings";
 import { Component } from 'react';
 import "./Dashboard2.css"
-
+import UpdateProfile from "./UpdateProfile";
 
 class Dashboard2 extends Component{
 
@@ -28,6 +28,7 @@ class Dashboard2 extends Component{
                         <Route path="/tags" component={Tags}/>
                         <Route path="/folders" component={Folders}/>
                         <Route path="/settings" component={Settings}/>
+                        <Route path="/update-profile" component={UpdateProfile}/>
 
                     </div>
                 </div>

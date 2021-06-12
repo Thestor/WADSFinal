@@ -1,7 +1,7 @@
 import React, {useRef,useState} from "react"
 import {Form,Button,Card,Alert} from "react-bootstrap"
 import {useAuth} from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory, NavLink } from "react-router-dom"
 
 export default function Settings() {
 
@@ -59,7 +59,7 @@ export default function Settings() {
             <Card.Body>
             {error && <Alert variant="danger">{error}</Alert>}
             <strong>Email: </strong> {currentUser.email}
-            <Link to='update-profile' className='btn btn-primary w-100 mt-3'>Update Profile</Link>
+            <NavLink to="/update-profile" className='btn btn-primary w-100 mt-3'>Update Profile</NavLink>
             </Card.Body>
         </Card>
         <div className="w-100 text-center mt-2">

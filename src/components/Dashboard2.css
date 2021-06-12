@@ -34,5 +34,17 @@ ul.header li a {
   margin-bottom: 10px;
 }
 
+.input {
+  display:flex;
+  justify-content: center;
+  width:100%;
+}
+
+.inputLink input {
+  height:20px;
+
+}
+
+
 
 
