@@ -5,8 +5,8 @@ class Home extends Component {
         return (
         <div>
             <div className="input">
-                <input type="text" className="inputLink" value={this.props.value} name={this.props.name} onChange={this.props.handleChange}/>
-                <input type="submit"/>
+                <input type="text" className="inputLink" value={this.props.value} name={this.props.name} onChange={this.props.handleChange} placeholder="Enter URL..."/>
+                <input type="submit" value="Add" className="submitLink"/>
             </div>
             <h2>HELLO</h2>
             <p>Cras facilisis urna ornare ex volutpat, et
