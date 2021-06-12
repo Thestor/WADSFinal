@@ -34,7 +34,7 @@ export default function UpdateProfile() {
         }
 
         Promise.all(promises).then(() => {
-            history.push('/')
+            history.push('/settings')
         }).catch(() => {
             setError('failed to update')
         }).finally(() => {
@@ -72,7 +72,7 @@ export default function UpdateProfile() {
                 </Card.Body>
             </Card>
             <div className="w-100 text-center mt-2">
-                <Link to='/login'>Cancel</Link>
+                <Link to='/settings'>Cancel</Link>
             </div>
         </>
     )

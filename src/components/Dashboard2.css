@@ -34,22 +34,6 @@ ul.header li a {
   margin-bottom: 10px;
 }
 
-.input {
-  display:flex;
-  justify-content: center;
-  margin: 40px 10px;
-  padding:0;
-}
-
-input {
-  height:60px;;
-  width:100%;
-
-}
-
-.submitLink {
-  width:15%;
-}
 
 
 

@@ -1,25 +1,93 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
+import NewTag from './NewTag';
+import NewURL from './NewURL';
+import './Home.css';
+
  
-class Home extends Component {
-    render() {
-        return (
+export default function Home() {
+
+    const [tags, setTags] = useState([]);
+    const [urls, setURLS] = useState([]);
+    const [errors, setErrors] = useState({});
+
+    const changeHandler = (name, value) => {
+        if(name === 'tags') {
+        setTags(value);
+        if(value.length > 0 && errors.tags) {
+            setErrors(prev => {
+            const prevErrors = {...prev};
+            delete prevErrors.tags;
+            return prevErrors;
+            });
+        }
+        }
+
+        else if(name === 'urls') {
+            setURLS(value);
+            if(value.length > 0 && errors.urls) {
+                setErrors(prev => {
+                const prevErrors = {...prev};
+                delete prevErrors.urls;
+                return prevErrors;
+                });
+            }
+        }
+    }
+
+  const submitHandler = e => {
+    e.preventDefault();
+
+    if(tags.length === 0) {
+      setErrors(prev => ({
+        ...prev,
+        tags: 'Please add at least one tag'
+      }));
+    }
+
+    if(urls.length === 0) {
+        setErrors(prev => ({
+          ...prev,
+          urls: 'Please enter a URL'
+        }));
+      }
+
+    if(tags.length > 0) {
+      console.log(tags, urls);
+      // Submit form
+    }
+  }
+
+  return (
+    <>
         <div>
-            <div className="input">
-                <input type="text" className="inputLink" value={this.props.value} name={this.props.name} onChange={this.props.handleChange} placeholder="Enter URL..."/>
-                <input type="submit" value="Add" className="submitLink"/>
-            </div>
-            <h2>HELLO</h2>
-            <p>Cras facilisis urna ornare ex volutpat, et
-            convallis erat elementum. Ut aliquam, ipsum vitae
-            gravida suscipit, metus dui bibendum est, eget rhoncus nibh
-            metus nec massa. Maecenas hendrerit laoreet augue
-            nec molestie. Cum sociis natoque penatibus et magnis
-            dis parturient montes, nascetur ridiculus mus.</p>
-    
-            <p>Duis a turpis sed lacus dapibus elementum sed eu lectus.</p>
+            <form onSubmit={submitHandler}>
+
+                <NewURL
+                label="URL"
+                id="urls"
+                name="urls"
+                placeholder="Enter URL.."
+                onChange={changeHandler}
+                error={errors.urls}
+                />   
+                           
+                <br></br>
+
+                <NewTag 
+                label="Tags"
+                id="tags"
+                name="tags"
+                placeholder="Add tag"
+                onChange={changeHandler}
+                error={errors.tags}
+                defaultTags={tags}
+                />
+                
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        );
-    };
+    </>
+
+    );
+    
 }
- 
-export default Home;

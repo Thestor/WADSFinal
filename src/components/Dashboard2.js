@@ -9,6 +9,7 @@ import { Component } from 'react';
 import "./Dashboard2.css"
 import UpdateProfile from "./UpdateProfile";
 
+
 class Dashboard2 extends Component{
 
 
