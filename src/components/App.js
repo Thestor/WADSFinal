@@ -10,10 +10,10 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from './UpdateProfile'
 
 
-import {Container} from 'react-bootstrap'
 import {AuthProvider} from "../contexts/AuthContext"
 import {BrowserRouter as Router, Switch,Route} from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
+
 
 function App() {
   return(
@@ -26,7 +26,7 @@ function App() {
           <AuthProvider>
             <Switch>
               <Route exact path="/" component={LandingPage}/>
-              <PrivateRoute exact path="/dashboard" component={Dashboard2}/>
+              <PrivateRoute path="/dashboard" component={Dashboard2}/>
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />

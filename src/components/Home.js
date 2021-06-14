@@ -7,8 +7,9 @@ import './Home.css';
 export default function Home() {
 
     const [tags, setTags] = useState([]);
-    const [urls, setURLS] = useState([]);
+    const [url, setURL] = useState('');
     const [errors, setErrors] = useState({});
+    const [error,setError] = useState('');
 
     const changeHandler = (name, value) => {
         if(name === 'tags') {
@@ -22,40 +23,35 @@ export default function Home() {
         }
         }
 
-        else if(name === 'urls') {
-            setURLS(value);
-            if(value.length > 0 && errors.urls) {
-                setErrors(prev => {
-                const prevErrors = {...prev};
-                delete prevErrors.urls;
-                return prevErrors;
-                });
-            }
-        }
     }
 
-  const submitHandler = e => {
-    e.preventDefault();
-
-    if(tags.length === 0) {
-      setErrors(prev => ({
-        ...prev,
-        tags: 'Please add at least one tag'
-      }));
+    const urlChange = (name,value) => {
+      setURL(value);
     }
 
-    if(urls.length === 0) {
+  
+
+    const submitHandler = e => {
+      e.preventDefault();
+
+      if(tags.length === 0) {
         setErrors(prev => ({
           ...prev,
-          urls: 'Please enter a URL'
+          tags: 'Please add at least one tag'
         }));
       }
 
-    if(tags.length > 0) {
-      console.log(tags, urls);
-      // Submit form
+
+      if(tags.length > 0) {
+        // Submit form
+        console.log(url,tags);
+        alert("Successfully Added New Bookmark: \n\nURL: " + String(url) + "\n" + "Tags: " + String(tags));
+        window.location.reload();
+
+      }
     }
-  }
+
+
 
   return (
     <>
@@ -64,13 +60,13 @@ export default function Home() {
 
                 <NewURL
                 label="URL"
-                id="urls"
-                name="urls"
+                name="url"
+                id="url"
                 placeholder="Enter URL.."
-                onChange={changeHandler}
-                error={errors.urls}
+                onChange={urlChange}
+                error={error.url}
                 />   
-                           
+
                 <br></br>
 
                 <NewTag 
@@ -82,8 +78,12 @@ export default function Home() {
                 error={errors.tags}
                 defaultTags={tags}
                 />
-                
-                <button type="submit">Submit</button>
+
+                <br></br>
+                <div className="submitButton">
+                  <button type="submit ">Submit</button>
+                </div>
+
             </form>
         </div>
     </>

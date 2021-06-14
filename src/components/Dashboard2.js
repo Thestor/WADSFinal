@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Route, NavLink, HashRouter, useHistory} from "react-router-dom"
+import {Link, Route, NavLink, HashRouter, useHistory} from "react-router-dom"
 
 import Home from "./Home";
 import Tags from "./Tags";
@@ -19,13 +19,13 @@ class Dashboard2 extends Component{
                 <div className="w-100">
                     <h1>BuqMarq</h1>
                     <ul className="header">
-                        <li><NavLink to="/">Home</NavLink></li>
+                        <li><NavLink to="/home">Home</NavLink></li>
                         <li><NavLink to="/tags">Tags</NavLink></li>
                         <li><NavLink to="/folders">Folders</NavLink></li>
                         <li><NavLink to="/settings">Settings</NavLink></li>
                     </ul>
                     <div className="content">
-                        <Route exact path="/" component={Home}/>
+                        <Route exact path="/home" component={Home}/>
                         <Route path="/tags" component={Tags}/>
                         <Route path="/folders" component={Folders}/>
                         <Route path="/settings" component={Settings}/>
