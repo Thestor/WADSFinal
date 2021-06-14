@@ -1,15 +1,13 @@
 import React, {Component} from "react";
+import {FolderList} from './FolderList';
 
-class Folders extends Component {
-    render() {
-        return (
-            <div>
-                <h2>FOLDERS</h2>
-                <p>WORK IN PROGRESS!</p>
-                
-            </div>
-        );
-    }
+function Folders() {
+    return (
+        <div>
+            <FolderList />
+        </div>
+    );
 }
+
 
 export default Folders;

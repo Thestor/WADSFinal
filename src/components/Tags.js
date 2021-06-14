@@ -1,17 +1,13 @@
 import React, {Component} from "react";
+import {TagList} from './TagList';
 
-import TagCard from './TagCard';
-
-export default function Tags() {
-
-    // const [cardData, setCardData] = useState(['tag1','tag2','tag3']);
-
+function Folders() {
     return (
         <div>
-            <h2>TAGS</h2>
-            <p>WORK IN PROGRESS</p>
-
+            <TagList />
         </div>
     );
-
 }
+
+
+export default Folders;

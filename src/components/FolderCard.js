@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import TagPop from './TagPop';
+import FolderPop from './FolderPop';
 
-export function TagCard() {
+export function FolderCard() {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,9 +23,9 @@ export function TagCard() {
         </div>
       </div>
     </div>
-    {isOpen && <TagPop
+    {isOpen && <FolderPop
     content={<>
-    <b>Tag Details: </b> 
+    <b>Folder Details: </b> 
     <p>Mark 1</p>
     <p>Mark 2</p>
     <p>Mark 3</p>
