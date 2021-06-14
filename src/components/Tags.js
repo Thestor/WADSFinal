@@ -1,19 +1,16 @@
 import React, {Component} from "react";
 
+import TagCard from './TagCard';
 
 export default function Tags() {
+
+    // const [cardData, setCardData] = useState(['tag1','tag2','tag3']);
 
     return (
         <div>
             <h2>TAGS</h2>
-            <p>This is where the tags go</p>
-            <ol>
-                <li>tag1</li>
-                <li>tag1</li>
-                <li>tag1</li>
-                <li>tag1</li>
-                <li>tag1</li>
-            </ol>
+            <p>WORK IN PROGRESS</p>
+
         </div>
     );
 

@@ -5,14 +5,8 @@ class Folders extends Component {
         return (
             <div>
                 <h2>FOLDERS</h2>
-                <p>This is where the folders go</p>
-                <ol>
-                    <li>folder1</li>
-                    <li>folder1</li>
-                    <li>folder1</li>
-                    <li>folder1</li>
-                    <li>folder1</li>
-                </ol>
+                <p>WORK IN PROGRESS!</p>
+                
             </div>
         );
     }
