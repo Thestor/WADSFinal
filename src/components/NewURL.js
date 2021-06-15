@@ -4,8 +4,8 @@ import React, { Component, useState } from "react";
 
 
 const NewURL = ({label, id, name, placeholder, error, onChange}) => {
-    const [value,setValue] = useState('');
-    const [url, setURL] = useState('');
+    const [value,setValue] = useState(''); 
+    const [url, setURL] = useState(''); 
 
     const changeHandler = (e) => {
         setValue(e.target.value);

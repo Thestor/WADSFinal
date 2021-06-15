@@ -6,8 +6,8 @@ import './Home.css';
  
 export default function Home() {
 
-    const [tags, setTags] = useState([]);
-    const [url, setURL] = useState('');
+    const [tags, setTags] = useState([]); //DATA FOR INPUT TAGS
+    const [url, setURL] = useState(''); //DATA FOR INPUT URL
     const [errors, setErrors] = useState({});
     const [error,setError] = useState('');
 
@@ -47,6 +47,9 @@ export default function Home() {
         console.log(url,tags);
         alert("Successfully Added New Bookmark: \n\nURL: " + String(url) + "\n" + "Tags: " + String(tags));
         window.location.reload();
+
+        //POST METHOD BELOW, user input is in url and tags
+        
 
       }
     }

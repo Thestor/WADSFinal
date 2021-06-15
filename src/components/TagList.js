@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { TagCard } from './TagCard';
+import TagPop from './TagPop';
 
 export class TagList extends Component {
 
   constructor() {
     super();
     this.state = {
-      tags: [1, 2, 3]
+      tags: [1, 2, 3] //DATA FOR TAGS USE GET HERE
     }
   }
 
@@ -45,7 +46,7 @@ export class TagList extends Component {
             <h2 className='page-title'>TAGS</h2>
           </div>
           <div className="col-md-6">
-            <button onClick={() => { this.addTags() }} className="btn btn-dark">Add Tags</button>
+            <button onClick={this.addTags()} className="btn btn-dark">Add Tags</button>
           </div>
         </div>
         <div className='row'>

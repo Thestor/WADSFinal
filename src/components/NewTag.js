@@ -4,8 +4,8 @@ import React, { Component, useState } from "react";
 
 
 const NewTag = ({label, id, name, placeholder, error, onChange, defaultTags}) => {
-    const [value,setValue] = useState('');
-    const [tags,setTags] = useState(defaultTags ? defaultTags : []);
+    const [value,setValue] = useState(''); 
+    const [tags,setTags] = useState(defaultTags ? defaultTags : []); 
     const [isActive, setIsActive] = useState(false);
 
 

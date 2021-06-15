@@ -6,7 +6,7 @@ export class FolderList extends Component {
   constructor() {
     super();
     this.state = {
-      folders: [1, 2, 3]
+      folders: [1, 2, 3] //DATA FOR FOLDERS USE GET HERE
     }
   }
 
