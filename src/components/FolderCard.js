@@ -18,17 +18,19 @@ export function FolderCard() {
         <img className="card-img-top" src="http://via.placeholder.com/350x250" alt=""></img>
         <div className="card-body">
           <h3 className="card-text" style={{textAlign:'center'}}>
-            Tag 
+            Folder 1 
           </h3>
         </div>
       </div>
     </div>
     {isOpen && <FolderPop
     content={<>
-    <b>Folder Details: </b> 
-    <p>Mark 1</p>
-    <p>Mark 2</p>
-    <p>Mark 3</p>
+    <b>Folder Details:</b>
+    <div>
+    <p>- www.google.com</p>
+    <p>- www.facebook.com</p>
+    <p>- www.gmail.com</p>
+    </div>
     </>}
     handleClose={togglePopUp}
     />}

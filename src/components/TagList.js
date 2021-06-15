@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { TagCard } from './TagCard';
-import TagPop from './TagPop';
 
 export class TagList extends Component {
 
@@ -46,7 +45,7 @@ export class TagList extends Component {
             <h2 className='page-title'>TAGS</h2>
           </div>
           <div className="col-md-6">
-            <button onClick={this.addTags()} className="btn btn-dark">Add Tags</button>
+            <button onClick={() => { this.addFolders() }} className="btn btn-dark">Add Tags</button>
           </div>
         </div>
         <div className='row'>

@@ -25,10 +25,12 @@ export function TagCard() {
     </div>
     {isOpen && <TagPop
     content={<>
-    <b>Tag Details: </b> 
-    <p>Mark 1</p>
-    <p>Mark 2</p>
-    <p>Mark 3</p>
+    <b>Tag Details:</b>
+    <div>
+    <p>- www.google.com</p>
+    <p>- www.facebook.com</p>
+    <p>- www.gmail.com</p>
+    </div>
     </>}
     handleClose={togglePopUp}
     />}
